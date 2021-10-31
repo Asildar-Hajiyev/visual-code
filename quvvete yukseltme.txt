@@ -1,0 +1,40 @@
+using System;
+
+namespace newproj
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("reqem daxil et");
+            int reqem = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("quvvetleri daxil et");
+            int quvvet = Convert.ToInt32(Console.ReadLine());
+            int result = quvvet1(reqem, quvvet); 
+            Console.WriteLine($"{reqem}-in {quvvet} i {result} beraberdir");
+
+            Console.WriteLine("------------------------------");
+
+
+            Console.WriteLine("reqem daxil et");
+            int x = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("quvvetleri daxil et");
+            int y = Convert.ToInt32(Console.ReadLine());
+            int netice = quvvet1(x, y);
+            Console.WriteLine($"{x}-in {y} i {netice} beraberdir");
+        }
+
+        private static int quvvet1(int reqem, int quvvet)
+        {
+
+            int result = 1;
+            for (int i = 0; i < quvvet; i++)
+            {
+
+                result *= reqem;
+
+            }
+            return result;
+        }
+    }
+}
